@@ -1,16 +1,3 @@
-input1 = "abc\n\na\nb\nc\n\nab\nac\n\na\na\na\na\n\nb"
-input2 = ""
-input3 = "abcdefghijklmnopqrstuvwxyz\n\na\nb\nc\n\nab\nac\n\na\na\na\na\n\nb"
-input4 = "abcdefghijklmnopqrstuvwxyz\na\nb\nc\nd\ne\nf\ng\nh\ni\nj\nk\nl\nm\nn\no\np\nq\nr\ns\nt\nu\nv\nw\nx\ny\nz"
-input5 = "\n\n"
-input6 = "abcdefghijklmnopqrstuvwxyz\na\nb\nc\nd\ne\nf\ng\nh\ni\nj\nk\nl\nm\nn\no\np\nq\nr\ns\nt\nu\nv\nw\nx\ny\nz\n\na"
-input7 = "abc\n\na\nb\nc\n\nab\nac\n\na\na\na\na\n\nb\n\n"
-input8 = "\n\n\n\n"
-
-
-
-
-
 def count_answers_per_group(input_str: str) -> int:
     """return the sum of counts to which any person answered yes to a question across groups"""
     groups = input_str.split('\n\n')
@@ -41,6 +28,16 @@ def count_answers_per_group2(input_str: str) -> int:
                 newline_counter = 0
     total += len(current_groups_answers)
     return total
+
+
+input1 = "abc\n\na\nb\nc\n\nab\nac\n\na\na\na\na\n\nb"
+input2 = ""
+input3 = "abcdefghijklmnopqrstuvwxyz\n\na\nb\nc\n\nab\nac\n\na\na\na\na\n\nb"
+input4 = "abcdefghijklmnopqrstuvwxyz\na\nb\nc\nd\ne\nf\ng\nh\ni\nj\nk\nl\nm\nn\no\np\nq\nr\ns\nt\nu\nv\nw\nx\ny\nz"
+input5 = "\n\n"
+input6 = "abcdefghijklmnopqrstuvwxyz\na\nb\nc\nd\ne\nf\ng\nh\ni\nj\nk\nl\nm\nn\no\np\nq\nr\ns\nt\nu\nv\nw\nx\ny\nz\n\na"
+input7 = "abc\n\na\nb\nc\n\nab\nac\n\na\na\na\na\n\nb\n\n"
+input8 = "\n\n\n\n"
 
 assert count_answers_per_group(input_str=input1) == 11
 assert count_answers_per_group(input_str=input2) == 0
